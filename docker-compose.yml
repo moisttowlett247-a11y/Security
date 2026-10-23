@@ -1,0 +1,106 @@
+version: '3.8'
+
+networks:
+  security_internal_net:
+    driver: bridge
+    internal: true
+    ipam:
+      config:
+        - subnet: 172.30.0.0/16
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: synapse_backend_engine
+    restart: unless-stopped
+    user: "1000:1000"
+    networks:
+      - security_internal_net
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=production
+      - DATABASE_URL=postgresql+asyncpg://synapse_user:secure_password_99@postgres:5432/synapse_db
+      - REDIS_URL=redis://redis:6379/0
+      - JWT_SECRET_KEY=super_secure_jwt_secret_key_rotation_2026_xdr
+      - ANOMALY_THRESHOLD=0.85
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 4G
+        reservations:
+          cpus: '0.5'
+          memory: 1G
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: synapse_postgres
+    restart: unless-stopped
+    user: "postgres"
+    networks:
+      - security_internal_net
+    environment:
+      POSTGRES_USER: synapse_user
+      POSTGRES_PASSWORD: secure_password_99
+      POSTGRES_DB: synapse_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    security_opt:
+      - no-new-privileges:true
+    deploy:
+      resources:
+        limits:
+          cpus: '1.5'
+          memory: 2G
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U synapse_user -d synapse_db"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  redis:
+    image: redis:7.2-alpine
+    container_name: synapse_redis
+    restart: unless-stopped
+    user: "redis"
+    networks:
+      - security_internal_net
+    command: redis-server --save 60 1 --loglevel warning
+    volumes:
+      - redis_data:/data
+    security_opt:
+      - no-new-privileges:true
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1G
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
