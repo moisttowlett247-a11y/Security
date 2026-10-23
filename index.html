@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Synapse-XDR Enterprise Cybersecurity Command Center</title>
-    <meta name="description" content="Unified SIEM, SOAR, and EDR Security Operations Platform Dashboard." />
+    <meta name="description" content="Serverless GitHub Pages Security Operations Platform Dashboard." />
     <!-- Tailwind CSS v4 CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,7 @@
   <body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col antialiased selection:bg-emerald-500 selection:text-slate-950">
 
     <!-- Top Navigation Bar -->
-    <header id="top-nav-bar" class="flex items-center justify-between px-6 py-4 bg-slate-900 border-b border-slate-800 sticky top-0 z-50">
+    <header class="flex items-center justify-between px-6 py-4 bg-slate-900 border-b border-slate-800 sticky top-0 z-50">
       <div class="flex items-center gap-3">
         <div class="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
@@ -27,171 +27,74 @@
           <h1 class="text-base font-bold tracking-tight text-white">Synapse-XDR</h1>
           <p id="system-status-indicator" class="text-[11px] text-emerald-400 font-mono tracking-wide flex items-center gap-1.5">
             <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            ZERO-TRUST ORCHESTRATION: ONLINE
+            SERVERLESS GITHUB PAGES: ONLINE
           </p>
         </div>
       </div>
       <div class="flex items-center gap-4">
-        <span id="current-utc-time" class="text-xs font-mono text-slate-400">10:03:26 UTC</span>
-        <button id="global-lockdown-btn" class="px-4 py-2 bg-red-600 hover:bg-red-500 text-white font-bold text-xs uppercase tracking-wider rounded-lg transition-colors shadow-sm flex items-center gap-2">
-          <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
-          Emergency Lockdown
+        <button id="manual-audit-btn" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs uppercase tracking-wider rounded-lg border border-slate-700 transition-colors shadow-sm">
+          Manual System Audit
         </button>
       </div>
     </header>
 
     <!-- Main Workspace Grid -->
-    <div class="flex flex-1 overflow-hidden">
-      
-      <!-- Left-Hand Navigation Sidebar -->
-      <aside id="sidebar-nav" class="w-64 bg-slate-900/80 border-r border-slate-800 p-4 flex flex-col justify-between hidden md:flex">
-        <nav class="space-y-1">
-          <a href="#dashboard" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-slate-800 text-emerald-400 text-sm font-medium border border-slate-700">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
-            <span>Command Dashboard</span>
-          </a>
-          <a href="#siem" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white text-sm font-medium transition-colors">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
-            <span>SIEM Log Stream</span>
-          </a>
-          <a href="#soar" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white text-sm font-medium transition-colors">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-            <span>SOAR Playbooks</span>
-          </a>
-          <a href="#crypto" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white text-sm font-medium transition-colors">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-            <span>Crypto Vault (HSM)</span>
-          </a>
-          <a href="#settings" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white text-sm font-medium transition-colors">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-            <span>Platform Settings</span>
-          </a>
-        </nav>
-        <div class="p-3 bg-slate-950 rounded-lg border border-slate-800 text-xs font-mono text-slate-400">
-          <div class="flex items-center justify-between mb-1">
-            <span>Cluster ID</span>
-            <span class="text-emerald-400">us-west-2</span>
-          </div>
-          <div class="flex items-center justify-between">
-            <span>Security Tier</span>
-            <span class="text-emerald-400">FIPS 140-3</span>
-          </div>
+    <main class="flex-1 max-w-7xl w-full mx-auto p-6 space-y-6">
+
+      <!-- Metric Panel Blocks with Required IDs -->
+      <section class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-sm relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-2 h-full bg-red-500 animate-pulse"></div>
+          <p class="text-xs font-mono text-slate-400">ACTIVE THREATS</p>
+          <p id="active-threats-count" class="text-3xl font-bold font-mono text-red-400 mt-2">3</p>
+          <p class="text-[11px] text-slate-500 mt-1">Awaiting SOAR containment</p>
         </div>
-      </aside>
 
-      <!-- Central Content Viewport -->
-      <main class="flex-1 overflow-y-auto p-6 space-y-6">
+        <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-sm">
+          <p class="text-xs font-mono text-slate-400">BLOCKED IPS (XDP)</p>
+          <p id="blocked-ips-count" class="text-3xl font-bold font-mono text-emerald-400 mt-2">1,428,950</p>
+          <p class="text-[11px] text-slate-500 mt-1">Line-rate kernel drops</p>
+        </div>
 
-        <!-- Top-Level Stats Bar -->
-        <section id="stats-bar" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div id="stat-card-active-threats" class="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-sm relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-2 h-full bg-red-500 animate-pulse"></div>
-            <p class="text-xs font-mono text-slate-400">ACTIVE THREATS</p>
-            <p id="stat-value-active-threats" class="text-3xl font-bold font-mono text-red-400 mt-2">3</p>
-            <p class="text-[11px] text-slate-500 mt-1">Requiring immediate SOAR isolation</p>
+        <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-sm">
+          <p class="text-xs font-mono text-slate-400">SYSTEM HEALTH</p>
+          <p id="system-health-status" class="text-3xl font-bold font-mono text-emerald-400 mt-2">NOMINAL (99.98%)</p>
+          <p class="text-[11px] text-slate-500 mt-1">Zero-trust nodes online</p>
+        </div>
+      </section>
+
+      <!-- Scrollable Threat Ingestion Console Table with id="threat-log-table" -->
+      <section class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-xl">
+        <div class="flex items-center justify-between px-6 py-4 bg-slate-950 border-b border-slate-800">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-red-500 animate-ping"></span>
+            <h2 class="text-sm font-bold text-white uppercase tracking-wider font-mono">Live Threat Ingestion Console</h2>
           </div>
+          <span class="text-xs font-mono text-slate-400 bg-slate-900 px-3 py-1 rounded border border-slate-800">Artifact Sync: Active</span>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-slate-950/60 text-slate-400 border-b border-slate-800 text-[11px] font-mono">
+                <th class="py-3 px-4">EVENT ID</th>
+                <th class="py-3 px-4">TIMESTAMP</th>
+                <th class="py-3 px-4">SOURCE IP</th>
+                <th class="py-3 px-4">TARGET ASSET</th>
+                <th class="py-3 px-4">ALERT MESSAGE</th>
+                <th class="py-3 px-4">SEVERITY</th>
+                <th class="py-3 px-4 text-right">SOAR ACTION</th>
+              </tr>
+            </thead>
+            <tbody id="threat-log-table" class="divide-y divide-slate-800 text-slate-300">
+              <!-- Dynamically populated by app.js -->
+            </tbody>
+          </table>
+        </div>
+      </section>
 
-          <div id="stat-card-blocked-ips" class="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-sm">
-            <p class="text-xs font-mono text-slate-400">BLOCKED IPS (XDP)</p>
-            <p id="stat-value-blocked-ips" class="text-3xl font-bold font-mono text-emerald-400 mt-2">1,428,950</p>
-            <p class="text-[11px] text-slate-500 mt-1">Line-rate kernel drops / sec</p>
-          </div>
+    </main>
 
-          <div id="stat-card-system-health" class="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-sm">
-            <p class="text-xs font-mono text-slate-400">SYSTEM HEALTH</p>
-            <p id="stat-value-system-health" class="text-3xl font-bold font-mono text-emerald-400 mt-2">99.98%</p>
-            <p class="text-[11px] text-slate-500 mt-1">Zero-trust microservices nominal</p>
-          </div>
-
-          <div id="stat-card-crypto-status" class="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-sm">
-            <p class="text-xs font-mono text-slate-400">CRYPTO STATUS (HSM)</p>
-            <p id="stat-value-crypto-status" class="text-3xl font-bold font-mono text-blue-400 mt-2">SECURE</p>
-            <p class="text-[11px] text-slate-500 mt-1">AES-256-GCM + RSA-4096 KEK</p>
-          </div>
-        </section>
-
-        <!-- Central Threat Ingestion Log Terminal Table -->
-        <section id="siem-terminal-section" class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-xl">
-          <div class="flex items-center justify-between px-6 py-4 bg-slate-950 border-b border-slate-800">
-            <div class="flex items-center gap-2">
-              <span class="w-3 h-3 rounded-full bg-red-500 animate-ping"></span>
-              <h2 class="text-sm font-bold text-white uppercase tracking-wider font-mono">Live SIEM Threat Ingestion Stream</h2>
-            </div>
-            <div class="flex items-center gap-2">
-              <span class="text-xs font-mono text-slate-400 bg-slate-900 px-3 py-1 rounded border border-slate-800">Buffer: 100% Nominal</span>
-              <button id="clear-logs-btn" class="px-3 py-1 bg-slate-800 hover:bg-slate-700 text-xs font-mono rounded text-slate-300">Clear</button>
-            </div>
-          </div>
-          <div class="overflow-x-auto">
-            <table id="threat-log-table" class="w-full text-left border-collapse font-mono text-xs">
-              <thead>
-                <tr class="bg-slate-950/60 text-slate-400 border-b border-slate-800 text-[11px]">
-                  <th class="py-3 px-6">EVENT ID</th>
-                  <th class="py-3 px-6">TIMESTAMP (UTC)</th>
-                  <th class="py-3 px-6">SOURCE IP</th>
-                  <th class="py-3 px-6">TARGET ASSET</th>
-                  <th class="py-3 px-6">ALERT MESSAGE</th>
-                  <th class="py-3 px-6">SEVERITY</th>
-                  <th class="py-3 px-6 text-right">STATUS</th>
-                </tr>
-              </thead>
-              <tbody id="threat-log-tbody" class="divide-y divide-slate-800 text-slate-300">
-                <tr id="row-inc-88210" class="hover:bg-slate-800/50 transition-colors">
-                  <td class="py-3 px-6 text-emerald-400">INC-88210</td>
-                  <td class="py-3 px-6 text-slate-400">18:03:26</td>
-                  <td class="py-3 px-6 font-mono">198.51.100.42</td>
-                  <td class="py-3 px-6">gateway-router-01</td>
-                  <td class="py-3 px-6">DDoS SYN Flood Attack Detected at XDP Layer</td>
-                  <td class="py-3 px-6"><span class="px-2 py-0.5 rounded bg-red-500/20 text-red-400 border border-red-500/40 font-bold">9.8</span></td>
-                  <td class="py-3 px-6 text-right"><span class="text-emerald-400 font-semibold">MITIGATED</span></td>
-                </tr>
-                <tr id="row-inc-88211" class="hover:bg-slate-800/50 transition-colors">
-                  <td class="py-3 px-6 text-emerald-400">INC-88211</td>
-                  <td class="py-3 px-6 text-slate-400">18:01:14</td>
-                  <td class="py-3 px-6 font-mono">203.0.113.19</td>
-                  <td class="py-3 px-6">prod-worker-db-04</td>
-                  <td class="py-3 px-6">Living-off-the-Land (LotL) PowerShell Spawn</td>
-                  <td class="py-3 px-6"><span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-400 border border-amber-500/40 font-bold">8.9</span></td>
-                  <td class="py-3 px-6 text-right"><span class="text-amber-400 font-semibold">ISOLATED</span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <!-- Dedicated Controls Panel for Automated Incident Responses -->
-        <section id="soar-controls-panel" class="bg-slate-900 border border-slate-800 rounded-xl p-6 space-y-4 shadow-xl">
-          <div class="flex items-center justify-between">
-            <div>
-              <h3 class="text-base font-bold text-white font-mono">Automated SOAR Playbook Trigger Console</h3>
-              <p class="text-slate-400 text-sm mt-0.5">Execute immediate containment protocols, eBPF drop mutations, and WORM backups.</p>
-            </div>
-            <span class="text-xs font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 px-3 py-1 rounded">Celery Queue: Active</span>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <button id="soar-btn-isolate-host" class="p-4 bg-slate-950 hover:bg-slate-800 border border-slate-800 rounded-lg text-left transition-all group">
-              <div class="text-xs font-mono text-emerald-400 mb-1">PLAYBOOK 01</div>
-              <div class="text-sm font-bold text-white group-hover:text-emerald-400 transition-colors">Isolate Compromised Host</div>
-              <div class="text-xs text-slate-400 mt-1">Terminates active sessions and enforces namespace isolation.</div>
-            </button>
-
-            <button id="soar-btn-xdp-drop" class="p-4 bg-slate-950 hover:bg-slate-800 border border-slate-800 rounded-lg text-left transition-all group">
-              <div class="text-xs font-mono text-amber-400 mb-1">PLAYBOOK 02</div>
-              <div class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors">Inject eBPF XDP Blacklist</div>
-              <div class="text-xs text-slate-400 mt-1">Drops malicious packets at network driver layer instantly.</div>
-            </button>
-
-            <button id="soar-btn-worm-snapshot" class="p-4 bg-slate-950 hover:bg-slate-800 border border-slate-800 rounded-lg text-left transition-all group">
-              <div class="text-xs font-mono text-blue-400 mb-1">PLAYBOOK 03</div>
-              <div class="text-sm font-bold text-white group-hover:text-blue-400 transition-colors">Lock WORM Backup Snapshot</div>
-              <div class="text-xs text-slate-400 mt-1">Creates immutable cryptographic backup to defeat ransomware.</div>
-            </button>
-          </div>
-        </section>
-
-      </main>
-    </div>
-
+    <!-- Load Frontend Logic Engine -->
+    <script src="./static/app.js"></script>
   </body>
 </html>
