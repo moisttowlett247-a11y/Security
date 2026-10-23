@@ -53,20 +53,42 @@ jobs:
           print('Zero-Trust JWT Verified for subject:', claims.sub)
           "
 
-      - name: Generate Telemetry Snapshot
+      - name: Prepare Public Deployment Asset Bundle
         run: |
-          mkdir -p static
-          cat << 'EOF' > static/threat_data.json
+          mkdir -p public
+          # Copy root index.html to public root to prevent 404 on GitHub Pages
+          if [ -f index.html ]; then
+            cp index.html public/index.html
+          fi
+          # Copy static app.js or src/app.js to public root
+          if [ -f static/app.js ]; then
+            cp static/app.js public/app.js
+          elif [ -f src/app.js ]; then
+            cp src/app.js public/app.js
+          fi
+          # Generate fresh threat telemetry JSON payload in public root
+          cat << 'EOF' > public/threat_data.json
           {
             "timestamp": "$(date -u +%s)",
             "status": "NOMINAL",
             "active_threats": 3,
             "blocked_ips": 1428950,
             "ci_runner": "GitHub Actions",
-            "pipeline": "secure"
+            "pipeline": "secure",
+            "events": [
+              {
+                "event_id": "INC-GH-9901",
+                "timestamp": "$(date -u +%s)",
+                "source_ip": "198.51.100.42",
+                "target_asset": "gateway-router-01",
+                "alert_message": "Automated GitHub Actions CI/CD Security Audit Ingest",
+                "severity_score": 9.8,
+                "soar_triggered": true
+              }
+            ]
           }
           EOF
-          echo "Telemetry snapshot generated at static/threat_data.json"
+          echo "Deployment bundle successfully prepared in public/"
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -74,7 +96,7 @@ jobs:
       - name: Upload Artifacts for GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './static'
+          path: './public'
 
       - name: Deploy to GitHub Pages
         id: deployment
