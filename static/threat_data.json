@@ -1,36 +1,54 @@
 {
-  "timestamp": 1792787856,
+  "timestamp": 1792798040,
   "status": "NOMINAL",
-  "active_threats": 3,
-  "blocked_ips": 1405261,
+  "active_threats": 5,
+  "blocked_ips": 1454611,
   "ci_runner": "Synapse-XDR Cloud Automation Engine",
   "pipeline": "secure",
   "events": [
     {
-      "event_id": "INC-AUTO-26769",
-      "timestamp": 1792785501,
-      "source_ip": "203.1.20.0",
+      "event_id": "INC-AUTO-14325",
+      "timestamp": 1792796400,
+      "source_ip": "103.104.160.0",
       "target_asset": "cluster-master-node",
       "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
       "severity_score": 9.2,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-76350",
-      "timestamp": 1792785193,
-      "source_ip": "192.96.146.0",
-      "target_asset": "payment-gateway-api",
+      "event_id": "INC-AUTO-99868",
+      "timestamp": 1792795678,
+      "source_ip": "204.179.64.0",
+      "target_asset": "gateway-router-01",
+      "alert_message": "Distributed Denial of Service (DDoS) SYN Flood Attack",
+      "severity_score": 9.5,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-56723",
+      "timestamp": 1792795283,
+      "source_ip": "103.179.133.0",
+      "target_asset": "auth-service-v2",
+      "alert_message": "Unauthorized Privilege Escalation via SUID Binary",
+      "severity_score": 8.6,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-16693",
+      "timestamp": 1792795778,
+      "source_ip": "202.37.248.0",
+      "target_asset": "auth-service-v2",
       "alert_message": "Brute Force SSH Login Attempt Detected",
       "severity_score": 7.5,
       "soar_triggered": false
     },
     {
-      "event_id": "INC-AUTO-39956",
-      "timestamp": 1792786760,
-      "source_ip": "91.215.85.0",
+      "event_id": "INC-AUTO-83612",
+      "timestamp": 1792797390,
+      "source_ip": "192.152.86.0",
       "target_asset": "prod-worker-db-04",
-      "alert_message": "Distributed Denial of Service (DDoS) SYN Flood Attack",
-      "severity_score": 9.5,
+      "alert_message": "Unauthorized Privilege Escalation via SUID Binary",
+      "severity_score": 8.6,
       "soar_triggered": true
     }
   ]
