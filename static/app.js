@@ -1,6 +1,6 @@
 /**
  * Synapse-XDR Enterprise Serverless Security Platform Logic Engine
- * Production-Grade Vanilla JavaScript for Static GitHub Pages Telemetry Ingestion & Interactive SOAR Simulation
+ * Production-Grade Vanilla JavaScript for Static GitHub Pages Telemetry Ingestion, Sidebar Routing, and Interactive SOAR Simulation
  */
 
 (function () {
@@ -213,12 +213,43 @@
         }
     }
 
+    /**
+     * Initializes sidebar navigation view-switching routing logic.
+     */
+    function initSidebarRouting() {
+        const navButtons = document.querySelectorAll('.sidebar-nav-btn');
+        const panels = document.querySelectorAll('.workspace-panel');
+
+        navButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetKey = button.getAttribute('data-target');
+
+                // Update active button styles
+                navButtons.forEach(btn => {
+                    btn.className = 'sidebar-nav-btn w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white text-sm font-medium text-left transition-colors';
+                });
+                button.className = 'sidebar-nav-btn w-full flex items-center gap-3 px-3 py-2.5 rounded-lg bg-slate-800 text-emerald-400 text-sm font-medium border border-slate-700 text-left transition-colors';
+
+                // Hide all panels, show target panel
+                panels.forEach(panel => {
+                    panel.classList.add('hidden');
+                });
+
+                const targetPanel = document.getElementById(`panel-${targetKey}`);
+                if (targetPanel) {
+                    targetPanel.classList.remove('hidden');
+                }
+            });
+        });
+    }
+
     // Initialize UI Event Bindings on DOMContentLoaded
     document.addEventListener('DOMContentLoaded', () => {
+        initSidebarRouting();
         fetchStaticThreatTelemetry();
         setInterval(fetchStaticThreatTelemetry, POLL_INTERVAL_MS);
 
-        // Bind interactive metric cards for deep analytical protocol explanations
         const activeThreatsCard = document.getElementById('metric-card-active-threats');
         if (activeThreatsCard) {
             activeThreatsCard.addEventListener('click', () => {
