@@ -1,0 +1,6 @@
+{
+  "name": "Synapse-XDR Enterprise Cybersecurity Orchestrator",
+  "description": "Ultra-sophisticated Zero-Trust Network Architecture, eBPF defense, ML endpoint telemetry, ZK crypto identity, SIEM graph analysis, SAST/DAST automation, and event-driven SOAR playbooks.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
