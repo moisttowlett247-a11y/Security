@@ -110,8 +110,7 @@ class CryptographicVaultEngine:
 
 class ZeroTrustAuthEngine:
     def __init__(self) -> None:
-        # For validation testing, export public key in PEM format
-        self._rsa_vault = CryptographicVaultEngine(rsa_key_size=2048) # Faster for JWT testing if needed, or 4096
+        self._rsa_vault = CryptographicVaultEngine(rsa_key_size=2048)
         self.public_pem = self._rsa_vault.master_public_key.public_bytes(
             encoding=Encoding.PEM,
             format=PublicFormat.SubjectPublicKeyInfo
@@ -140,9 +139,6 @@ class ZeroTrustAuthEngine:
             raise RuntimeError(f"Token generation failed: {str(e)}") from e
 
     def verify_and_parse_token(self, token: str, required_role: Optional[str] = None, required_scope: Optional[str] = None) -> UserClaims:
-        """
-        Decodes, verifies signature using RS256, validates expiration, checks RBAC roles/scopes, and parses into UserClaims.
-        """
         try:
             payload = jwt.decode(
                 token,
@@ -153,12 +149,10 @@ class ZeroTrustAuthEngine:
             
             claims = UserClaims(**payload)
             
-            # Role verification
             if required_role and required_role not in claims.roles:
                 logger.warning(f"Access denied for user {claims.sub}: missing required role '{required_role}'")
                 raise PermissionError(f"Required role '{required_role}' not present in token claims.")
                 
-            # Scope verification
             if required_scope and required_scope not in claims.scopes:
                 logger.warning(f"Access denied for user {claims.sub}: missing required scope '{required_scope}'")
                 raise PermissionError(f"Required scope '{required_scope}' not present in token claims.")
@@ -170,7 +164,7 @@ class ZeroTrustAuthEngine:
             raise ValueError("Authentication token has expired.") from ese
         except jwt.InvalidTokenError as ite:
             logger.warning(f"Token verification failed: Invalid token format or signature. Details: {str(ite)}")
-            raise ValueError(f"Invalid authentication token: {str(ite)}") fromite
+            raise ValueError(f"Invalid authentication token: {str(ite)}") from ite
         except PermissionError as pe:
             raise pe
         except Exception as e:
