@@ -1,10 +1,10 @@
-name: Synapse-XDR CI/CD & Automated Telemetry Pipeline
+name: Synapse-XDR Autonomous Threat Intelligence & GitHub Pages Deployment
 
 on:
   push:
     branches: [ "main" ]
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/10 * * * *'
   workflow_dispatch:
 
 permissions:
@@ -13,15 +13,15 @@ permissions:
   id-token: write
 
 jobs:
-  security-orchestration-pipeline:
+  threat-intelligence-pipeline:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
 
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
@@ -32,72 +32,35 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      - name: Run Cryptographic & Telemetry Verification Engine
+      - name: Run Automated Threat Intelligence Engine
         env:
           ENVIRONMENT: "production"
           VAULT_ENCRYPTION_KEY: ${{ secrets.VAULT_ENCRYPTION_KEY }}
           JWT_SECRET_KEY: ${{ secrets.JWT_SECRET_KEY }}
         run: |
-          echo "Executing zero-trust cryptographic validation & telemetry scan..."
-          python3 -c "
-          import asyncio
-          from src.crypto_engine import CryptographicVaultEngine, ZeroTrustAuthEngine
-          vault = CryptographicVaultEngine()
-          res = vault.encrypt_envelope('GitHub Actions CI/CD Security Audit Payload')
-          print('Envelope Encryption Verified:', res.algorithm)
-          auth = ZeroTrustAuthEngine()
-          token = auth.generate_token('system-ci', 'github_action_runner', ['ADMIN'], ['telemetry:write'])
-          claims = auth.verify_and_parse_token(token, required_scope='telemetry:write')
-          print('Zero-Trust JWT Verified for subject:', claims.sub)
-          "
+          echo "Executing automated OSINT threat intelligence collection..."
+          python3 threat_engine.py
 
-      - name: Prepare Public Deployment Asset Bundle
+      - name: Configure Git Credentials for Auto-Commit
         run: |
-          mkdir -p public
-          # Copy root index.html to public root to prevent 404 on GitHub Pages
-          if [ -f index.html ]; then
-            cp index.html public/index.html
-          fi
-          # Copy static app.js or src/app.js to public root
-          if [ -f static/app.js ]; then
-            cp static/app.js public/app.js
-          elif [ -f src/app.js ]; then
-            cp src/app.js public/app.js
-          fi
-          # Generate fresh threat telemetry JSON payload in public root
-          cat << 'EOF' > public/threat_data.json
-          {
-            "timestamp": "$(date -u +%s)",
-            "status": "NOMINAL",
-            "active_threats": 3,
-            "blocked_ips": 1428950,
-            "ci_runner": "GitHub Actions",
-            "pipeline": "secure",
-            "events": [
-              {
-                "event_id": "INC-GH-9901",
-                "timestamp": "$(date -u +%s)",
-                "source_ip": "198.51.100.42",
-                "target_asset": "gateway-router-01",
-                "alert_message": "Automated GitHub Actions CI/CD Security Audit Ingest",
-                "severity_score": 9.8,
-                "soar_triggered": true
-              }
-            ]
-          }
-          EOF
-          echo "Deployment bundle successfully prepared in public/"
+          git config --global user.name "synapse-security-bot[bot]"
+          git config --global user.email "synapse-security-bot[bot]@users.noreply.github.com"
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
+      - name: Commit & Push Updated Threat Telemetry
+        run: |
+          git status
+          git add static/threat_data.json
+          git diff --staged --quiet || git commit -m "chore(telemetry): update automated live threat intelligence payload [skip ci]"
+          git push origin main
+        continue-on-error: true
 
-      - name: Upload Artifacts for GitHub Pages
-        uses: actions/upload-pages-artifact@v3
+      - name: Deploy Static Artifacts to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          path: './public'
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./static
+          publish_branch: gh-pages
+          commit_message: "deploy(dashboard): publish serverless security command center [skip ci]"
+          force_orphan: false
