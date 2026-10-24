@@ -1,45 +1,36 @@
 {
-  "timestamp": 1792871046,
+  "timestamp": 1792878897,
   "status": "NOMINAL",
-  "active_threats": 4,
-  "blocked_ips": 1450565,
+  "active_threats": 3,
+  "blocked_ips": 1420282,
   "ci_runner": "Synapse-XDR Cloud Automation Engine",
   "pipeline": "secure",
   "events": [
     {
-      "event_id": "INC-AUTO-85666",
-      "timestamp": 1792869581,
-      "source_ip": "203.22.98.0",
-      "target_asset": "payment-gateway-api",
-      "alert_message": "Brute Force SSH Login Attempt Detected",
-      "severity_score": 7.5,
-      "soar_triggered": false
+      "event_id": "INC-AUTO-35977",
+      "timestamp": 1792876200,
+      "source_ip": "163.61.161.192",
+      "target_asset": "gateway-router-01",
+      "alert_message": "Ransomware Process Activity: Unauthorized File Encryption",
+      "severity_score": 9.9,
+      "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-89248",
-      "timestamp": 1792867629,
-      "source_ip": "203.27.57.0",
-      "target_asset": "payment-gateway-api",
+      "event_id": "INC-AUTO-40036",
+      "timestamp": 1792877262,
+      "source_ip": "202.49.151.0",
+      "target_asset": "auth-service-v2",
+      "alert_message": "Ransomware Process Activity: Unauthorized File Encryption",
+      "severity_score": 9.9,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-73878",
+      "timestamp": 1792876085,
+      "source_ip": "188.172.160.0",
+      "target_asset": "gateway-router-01",
       "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
       "severity_score": 9.2,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-76423",
-      "timestamp": 1792870258,
-      "source_ip": "38.134.3.0",
-      "target_asset": "auth-service-v2",
-      "alert_message": "Distributed Denial of Service (DDoS) SYN Flood Attack",
-      "severity_score": 9.5,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-96708",
-      "timestamp": 1792869982,
-      "source_ip": "160.188.0.0",
-      "target_asset": "prod-worker-db-04",
-      "alert_message": "Unauthorized Privilege Escalation via SUID Binary",
-      "severity_score": 8.6,
       "soar_triggered": true
     }
   ]
