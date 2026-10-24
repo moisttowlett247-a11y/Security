@@ -1,55 +1,46 @@
 {
-  "timestamp": 1792841093,
+  "timestamp": 1792852866,
   "status": "NOMINAL",
-  "active_threats": 5,
-  "blocked_ips": 1411919,
+  "active_threats": 4,
+  "blocked_ips": 1439971,
   "ci_runner": "Synapse-XDR Cloud Automation Engine",
   "pipeline": "secure",
   "events": [
     {
-      "event_id": "INC-AUTO-84641",
-      "timestamp": 1792840004,
-      "source_ip": "103.44.20.0",
+      "event_id": "INC-AUTO-77429",
+      "timestamp": 1792850900,
+      "source_ip": "202.162.68.0",
       "target_asset": "cluster-master-node",
+      "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
+      "severity_score": 9.2,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-33333",
+      "timestamp": 1792852706,
+      "source_ip": "103.57.90.0",
+      "target_asset": "auth-service-v2",
+      "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
+      "severity_score": 9.2,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-70057",
+      "timestamp": 1792849652,
+      "source_ip": "202.27.40.0",
+      "target_asset": "auth-service-v2",
       "alert_message": "Unauthorized Privilege Escalation via SUID Binary",
       "severity_score": 8.6,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-15090",
-      "timestamp": 1792840291,
-      "source_ip": "203.19.142.0",
-      "target_asset": "payment-gateway-api",
-      "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
-      "severity_score": 9.2,
+      "event_id": "INC-AUTO-61229",
+      "timestamp": 1792852571,
+      "source_ip": "202.36.234.0",
+      "target_asset": "prod-worker-db-04",
+      "alert_message": "Unauthorized Privilege Escalation via SUID Binary",
+      "severity_score": 8.6,
       "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-81293",
-      "timestamp": 1792840803,
-      "source_ip": "203.56.18.0",
-      "target_asset": "auth-service-v2",
-      "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
-      "severity_score": 9.2,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-48947",
-      "timestamp": 1792838213,
-      "source_ip": "203.24.136.0",
-      "target_asset": "auth-service-v2",
-      "alert_message": "Malicious C2 Beacon Ingress Connection",
-      "severity_score": 9.1,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-98143",
-      "timestamp": 1792837939,
-      "source_ip": "64.116.200.0",
-      "target_asset": "gateway-router-01",
-      "alert_message": "Brute Force SSH Login Attempt Detected",
-      "severity_score": 7.5,
-      "soar_triggered": false
     }
   ]
 }
