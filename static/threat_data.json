@@ -1,45 +1,54 @@
 {
-  "timestamp": 1792852866,
+  "timestamp": 1792863418,
   "status": "NOMINAL",
-  "active_threats": 4,
-  "blocked_ips": 1439971,
+  "active_threats": 5,
+  "blocked_ips": 1426393,
   "ci_runner": "Synapse-XDR Cloud Automation Engine",
   "pipeline": "secure",
   "events": [
     {
-      "event_id": "INC-AUTO-77429",
-      "timestamp": 1792850900,
-      "source_ip": "202.162.68.0",
+      "event_id": "INC-AUTO-38239",
+      "timestamp": 1792861302,
+      "source_ip": "164.155.0.0",
+      "target_asset": "auth-service-v2",
+      "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
+      "severity_score": 9.2,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-13894",
+      "timestamp": 1792860673,
+      "source_ip": "206.130.180.0",
+      "target_asset": "cluster-master-node",
+      "alert_message": "Ransomware Process Activity: Unauthorized File Encryption",
+      "severity_score": 9.9,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-95528",
+      "timestamp": 1792861493,
+      "source_ip": "202.27.208.0",
+      "target_asset": "cluster-master-node",
+      "alert_message": "Living-off-the-Land (LotL) Suspicious PowerShell Spawn",
+      "severity_score": 8.8,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-73726",
+      "timestamp": 1792862820,
+      "source_ip": "203.55.26.0",
+      "target_asset": "cluster-master-node",
+      "alert_message": "Living-off-the-Land (LotL) Suspicious PowerShell Spawn",
+      "severity_score": 8.8,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-82571",
+      "timestamp": 1792861216,
+      "source_ip": "203.34.151.0",
       "target_asset": "cluster-master-node",
       "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
       "severity_score": 9.2,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-33333",
-      "timestamp": 1792852706,
-      "source_ip": "103.57.90.0",
-      "target_asset": "auth-service-v2",
-      "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
-      "severity_score": 9.2,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-70057",
-      "timestamp": 1792849652,
-      "source_ip": "202.27.40.0",
-      "target_asset": "auth-service-v2",
-      "alert_message": "Unauthorized Privilege Escalation via SUID Binary",
-      "severity_score": 8.6,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-61229",
-      "timestamp": 1792852571,
-      "source_ip": "202.36.234.0",
-      "target_asset": "prod-worker-db-04",
-      "alert_message": "Unauthorized Privilege Escalation via SUID Binary",
-      "severity_score": 8.6,
       "soar_triggered": true
     }
   ]
