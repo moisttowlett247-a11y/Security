@@ -1,54 +1,72 @@
 {
-  "timestamp": 1793020046,
+  "timestamp": 1793041940,
   "status": "NOMINAL",
-  "active_threats": 5,
-  "blocked_ips": 1427493,
+  "active_threats": 7,
+  "blocked_ips": 1445500,
   "ci_runner": "Synapse-XDR Cloud Automation Engine",
   "pipeline": "secure",
   "events": [
     {
-      "event_id": "INC-AUTO-78427",
-      "timestamp": 1793019806,
-      "source_ip": "81.28.110.0",
-      "target_asset": "prod-worker-db-04",
-      "alert_message": "Brute Force SSH Login Attempt Detected",
-      "severity_score": 7.5,
-      "soar_triggered": false
+      "event_id": "INC-AUTO-94836",
+      "timestamp": 1793039422,
+      "source_ip": "203.21.106.0",
+      "target_asset": "cluster-master-node",
+      "alert_message": "Living-off-the-Land (LotL) Suspicious PowerShell Spawn",
+      "severity_score": 8.8,
+      "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-99203",
-      "timestamp": 1793017517,
-      "source_ip": "154.211.12.0",
+      "event_id": "INC-AUTO-13546",
+      "timestamp": 1793038680,
+      "source_ip": "199.84.224.0",
+      "target_asset": "cluster-master-node",
+      "alert_message": "Unauthorized Privilege Escalation via SUID Binary",
+      "severity_score": 8.6,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-50291",
+      "timestamp": 1793040873,
+      "source_ip": "188.215.72.0",
       "target_asset": "gateway-router-01",
       "alert_message": "Malicious C2 Beacon Ingress Connection",
       "severity_score": 9.1,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-74478",
-      "timestamp": 1793018137,
-      "source_ip": "103.180.26.0",
-      "target_asset": "payment-gateway-api",
-      "alert_message": "Brute Force SSH Login Attempt Detected",
-      "severity_score": 7.5,
-      "soar_triggered": false
-    },
-    {
-      "event_id": "INC-AUTO-75144",
-      "timestamp": 1793017633,
-      "source_ip": "203.19.56.0",
-      "target_asset": "prod-worker-db-04",
+      "event_id": "INC-AUTO-58014",
+      "timestamp": 1793039892,
+      "source_ip": "199.233.85.0",
+      "target_asset": "cluster-master-node",
       "alert_message": "Distributed Denial of Service (DDoS) SYN Flood Attack",
       "severity_score": 9.5,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-26263",
-      "timestamp": 1793017273,
-      "source_ip": "198.41.24.0",
-      "target_asset": "auth-service-v2",
-      "alert_message": "Unauthorized Privilege Escalation via SUID Binary",
-      "severity_score": 8.6,
+      "event_id": "INC-AUTO-97047",
+      "timestamp": 1793038711,
+      "source_ip": "141.103.0.0",
+      "target_asset": "prod-worker-db-04",
+      "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
+      "severity_score": 9.2,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-52142",
+      "timestamp": 1793041891,
+      "source_ip": "203.28.235.0",
+      "target_asset": "prod-worker-db-04",
+      "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
+      "severity_score": 9.2,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-38680",
+      "timestamp": 1793040088,
+      "source_ip": "103.189.150.0",
+      "target_asset": "cluster-master-node",
+      "alert_message": "Living-off-the-Land (LotL) Suspicious PowerShell Spawn",
+      "severity_score": 8.8,
       "soar_triggered": true
     }
   ]
