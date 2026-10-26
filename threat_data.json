@@ -1,46 +1,73 @@
 {
-  "timestamp": 1792970341,
+  "timestamp": 1792977395,
   "status": "NOMINAL",
-  "active_threats": 4,
-  "blocked_ips": 1445484,
+  "active_threats": 7,
+  "blocked_ips": 1423394,
   "ci_runner": "Synapse-XDR Cloud Automation Engine",
   "pipeline": "secure",
   "events": [
     {
-      "event_id": "INC-AUTO-16807",
-      "timestamp": 1792969412,
-      "source_ip": "192.131.92.0",
-      "target_asset": "payment-gateway-api",
-      "alert_message": "Brute Force SSH Login Attempt Detected",
-      "severity_score": 7.5,
-      "soar_triggered": false
-    },
-    {
-      "event_id": "INC-AUTO-47416",
-      "timestamp": 1792970298,
-      "source_ip": "202.49.224.0",
-      "target_asset": "auth-service-v2",
-      "alert_message": "Brute Force SSH Login Attempt Detected",
-      "severity_score": 7.5,
-      "soar_triggered": false
-    },
-    {
-      "event_id": "INC-AUTO-41726",
-      "timestamp": 1792969701,
-      "source_ip": "160.250.242.0",
+      "event_id": "INC-AUTO-41113",
+      "timestamp": 1792975713,
+      "source_ip": "203.8.1.0",
       "target_asset": "prod-worker-db-04",
-      "alert_message": "Ransomware Process Activity: Unauthorized File Encryption",
-      "severity_score": 9.9,
+      "alert_message": "Brute Force SSH Login Attempt Detected",
+      "severity_score": 7.5,
+      "soar_triggered": false
+    },
+    {
+      "event_id": "INC-AUTO-99757",
+      "timestamp": 1792975618,
+      "source_ip": "202.50.223.0",
+      "target_asset": "prod-worker-db-04",
+      "alert_message": "Distributed Denial of Service (DDoS) SYN Flood Attack",
+      "severity_score": 9.5,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-33921",
-      "timestamp": 1792966751,
-      "source_ip": "93.187.128.0",
-      "target_asset": "payment-gateway-api",
+      "event_id": "INC-AUTO-12976",
+      "timestamp": 1792975867,
+      "source_ip": "87.251.79.0",
+      "target_asset": "cluster-master-node",
       "alert_message": "Unauthorized Privilege Escalation via SUID Binary",
       "severity_score": 8.6,
       "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-50170",
+      "timestamp": 1792974537,
+      "source_ip": "199.184.8.0",
+      "target_asset": "prod-worker-db-04",
+      "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
+      "severity_score": 9.2,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-45616",
+      "timestamp": 1792975047,
+      "source_ip": "103.143.253.0",
+      "target_asset": "payment-gateway-api",
+      "alert_message": "Brute Force SSH Login Attempt Detected",
+      "severity_score": 7.5,
+      "soar_triggered": false
+    },
+    {
+      "event_id": "INC-AUTO-74084",
+      "timestamp": 1792974226,
+      "source_ip": "165.209.0.0",
+      "target_asset": "payment-gateway-api",
+      "alert_message": "Brute Force SSH Login Attempt Detected",
+      "severity_score": 7.5,
+      "soar_triggered": false
+    },
+    {
+      "event_id": "INC-AUTO-93406",
+      "timestamp": 1792976407,
+      "source_ip": "104.167.25.0",
+      "target_asset": "payment-gateway-api",
+      "alert_message": "Brute Force SSH Login Attempt Detected",
+      "severity_score": 7.5,
+      "soar_triggered": false
     }
   ]
 }
