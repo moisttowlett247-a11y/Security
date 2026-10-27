@@ -1,36 +1,63 @@
 {
-  "timestamp": 1793056051,
+  "timestamp": 1793066436,
   "status": "NOMINAL",
-  "active_threats": 3,
-  "blocked_ips": 1408487,
+  "active_threats": 6,
+  "blocked_ips": 1449346,
   "ci_runner": "Synapse-XDR Cloud Automation Engine",
   "pipeline": "secure",
   "events": [
     {
-      "event_id": "INC-AUTO-87034",
-      "timestamp": 1793054695,
-      "source_ip": "202.14.214.0",
-      "target_asset": "prod-worker-db-04",
-      "alert_message": "Brute Force SSH Login Attempt Detected",
-      "severity_score": 7.5,
-      "soar_triggered": false
+      "event_id": "INC-AUTO-30713",
+      "timestamp": 1793066220,
+      "source_ip": "87.228.109.0",
+      "target_asset": "auth-service-v2",
+      "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
+      "severity_score": 9.2,
+      "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-91775",
-      "timestamp": 1793054254,
-      "source_ip": "185.169.4.0",
+      "event_id": "INC-AUTO-10920",
+      "timestamp": 1793064417,
+      "source_ip": "196.251.85.0",
       "target_asset": "payment-gateway-api",
       "alert_message": "Distributed Denial of Service (DDoS) SYN Flood Attack",
       "severity_score": 9.5,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-65687",
-      "timestamp": 1793055031,
-      "source_ip": "203.217.175.0",
-      "target_asset": "prod-worker-db-04",
-      "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
-      "severity_score": 9.2,
+      "event_id": "INC-AUTO-35146",
+      "timestamp": 1793065334,
+      "source_ip": "203.12.26.0",
+      "target_asset": "cluster-master-node",
+      "alert_message": "Ransomware Process Activity: Unauthorized File Encryption",
+      "severity_score": 9.9,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-99740",
+      "timestamp": 1793063505,
+      "source_ip": "203.12.17.0",
+      "target_asset": "auth-service-v2",
+      "alert_message": "Unauthorized Privilege Escalation via SUID Binary",
+      "severity_score": 8.6,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-19370",
+      "timestamp": 1793064718,
+      "source_ip": "203.32.141.0",
+      "target_asset": "payment-gateway-api",
+      "alert_message": "Ransomware Process Activity: Unauthorized File Encryption",
+      "severity_score": 9.9,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-98704",
+      "timestamp": 1793065960,
+      "source_ip": "192.119.173.0",
+      "target_asset": "payment-gateway-api",
+      "alert_message": "Distributed Denial of Service (DDoS) SYN Flood Attack",
+      "severity_score": 9.5,
       "soar_triggered": true
     }
   ]
