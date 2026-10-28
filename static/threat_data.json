@@ -1,45 +1,45 @@
 {
-  "timestamp": 1793216050,
+  "timestamp": 1793230108,
   "status": "NOMINAL",
   "active_threats": 4,
-  "blocked_ips": 1454430,
+  "blocked_ips": 1423325,
   "ci_runner": "Synapse-XDR Cloud Automation Engine",
   "pipeline": "secure",
   "events": [
     {
-      "event_id": "INC-AUTO-50750",
-      "timestamp": 1793215633,
-      "source_ip": "176.98.187.0",
-      "target_asset": "auth-service-v2",
-      "alert_message": "Brute Force SSH Login Attempt Detected",
-      "severity_score": 7.5,
-      "soar_triggered": false
-    },
-    {
-      "event_id": "INC-AUTO-57483",
-      "timestamp": 1793215804,
-      "source_ip": "148.178.0.0",
-      "target_asset": "cluster-master-node",
-      "alert_message": "Living-off-the-Land (LotL) Suspicious PowerShell Spawn",
-      "severity_score": 8.8,
+      "event_id": "INC-AUTO-79539",
+      "timestamp": 1793227817,
+      "source_ip": "103.73.218.0",
+      "target_asset": "gateway-router-01",
+      "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
+      "severity_score": 9.2,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-34519",
-      "timestamp": 1793214070,
-      "source_ip": "192.54.251.0",
-      "target_asset": "prod-worker-db-04",
+      "event_id": "INC-AUTO-94774",
+      "timestamp": 1793227473,
+      "source_ip": "168.80.0.0",
+      "target_asset": "gateway-router-01",
+      "alert_message": "Malicious C2 Beacon Ingress Connection",
+      "severity_score": 9.1,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-99597",
+      "timestamp": 1793227706,
+      "source_ip": "163.61.205.0",
+      "target_asset": "gateway-router-01",
       "alert_message": "Unauthorized Privilege Escalation via SUID Binary",
       "severity_score": 8.6,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-43031",
-      "timestamp": 1793213232,
-      "source_ip": "86.105.230.0",
-      "target_asset": "cluster-master-node",
-      "alert_message": "Malicious C2 Beacon Ingress Connection",
-      "severity_score": 9.1,
+      "event_id": "INC-AUTO-43966",
+      "timestamp": 1793229321,
+      "source_ip": "144.172.65.0",
+      "target_asset": "payment-gateway-api",
+      "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
+      "severity_score": 9.2,
       "soar_triggered": true
     }
   ]
