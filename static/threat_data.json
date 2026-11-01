@@ -1,64 +1,37 @@
 {
-  "timestamp": 1793525953,
+  "timestamp": 1793549995,
   "status": "NOMINAL",
-  "active_threats": 6,
-  "blocked_ips": 1432638,
+  "active_threats": 3,
+  "blocked_ips": 1447116,
   "ci_runner": "Synapse-XDR Cloud Automation Engine",
   "pipeline": "secure",
   "events": [
     {
-      "event_id": "INC-AUTO-52437",
-      "timestamp": 1793522592,
-      "source_ip": "203.34.151.0",
+      "event_id": "INC-AUTO-36850",
+      "timestamp": 1793547291,
+      "source_ip": "203.17.192.0",
       "target_asset": "prod-worker-db-04",
-      "alert_message": "Living-off-the-Land (LotL) Suspicious PowerShell Spawn",
-      "severity_score": 8.8,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-47998",
-      "timestamp": 1793524417,
-      "source_ip": "202.37.59.0",
-      "target_asset": "gateway-router-01",
       "alert_message": "Unauthorized Privilege Escalation via SUID Binary",
       "severity_score": 8.6,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-67098",
-      "timestamp": 1793523201,
-      "source_ip": "203.15.138.0",
-      "target_asset": "prod-worker-db-04",
-      "alert_message": "Living-off-the-Land (LotL) Suspicious PowerShell Spawn",
-      "severity_score": 8.8,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-55846",
-      "timestamp": 1793523776,
-      "source_ip": "111.90.152.0",
-      "target_asset": "auth-service-v2",
-      "alert_message": "Unauthorized Privilege Escalation via SUID Binary",
-      "severity_score": 8.6,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-25630",
-      "timestamp": 1793522430,
-      "source_ip": "202.27.168.0",
+      "event_id": "INC-AUTO-42489",
+      "timestamp": 1793547653,
+      "source_ip": "203.55.168.0",
       "target_asset": "cluster-master-node",
-      "alert_message": "Brute Force SSH Login Attempt Detected",
-      "severity_score": 7.5,
-      "soar_triggered": false
+      "alert_message": "Malicious C2 Beacon Ingress Connection",
+      "severity_score": 9.1,
+      "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-89530",
-      "timestamp": 1793524527,
-      "source_ip": "43.243.48.0",
-      "target_asset": "prod-worker-db-04",
-      "alert_message": "Brute Force SSH Login Attempt Detected",
-      "severity_score": 7.5,
-      "soar_triggered": false
+      "event_id": "INC-AUTO-92659",
+      "timestamp": 1793548448,
+      "source_ip": "203.27.234.0",
+      "target_asset": "cluster-master-node",
+      "alert_message": "Distributed Denial of Service (DDoS) SYN Flood Attack",
+      "severity_score": 9.5,
+      "soar_triggered": true
     }
   ]
 }
