@@ -1,54 +1,54 @@
 {
-  "timestamp": 1793565352,
+  "timestamp": 1793577069,
   "status": "NOMINAL",
   "active_threats": 5,
-  "blocked_ips": 1445342,
+  "blocked_ips": 1406747,
   "ci_runner": "Synapse-XDR Cloud Automation Engine",
   "pipeline": "secure",
   "events": [
     {
-      "event_id": "INC-AUTO-18232",
-      "timestamp": 1793562300,
-      "source_ip": "203.14.181.0",
-      "target_asset": "cluster-master-node",
-      "alert_message": "Malicious C2 Beacon Ingress Connection",
-      "severity_score": 9.1,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-20140",
-      "timestamp": 1793563881,
-      "source_ip": "103.211.136.0",
-      "target_asset": "auth-service-v2",
-      "alert_message": "Brute Force SSH Login Attempt Detected",
-      "severity_score": 7.5,
-      "soar_triggered": false
-    },
-    {
-      "event_id": "INC-AUTO-24907",
-      "timestamp": 1793562851,
-      "source_ip": "185.241.211.0",
+      "event_id": "INC-AUTO-24472",
+      "timestamp": 1793575939,
+      "source_ip": "198.160.216.0",
       "target_asset": "prod-worker-db-04",
       "alert_message": "Brute Force SSH Login Attempt Detected",
       "severity_score": 7.5,
       "soar_triggered": false
     },
     {
-      "event_id": "INC-AUTO-68747",
-      "timestamp": 1793562156,
-      "source_ip": "170.95.0.0",
-      "target_asset": "payment-gateway-api",
-      "alert_message": "Ransomware Process Activity: Unauthorized File Encryption",
-      "severity_score": 9.9,
-      "soar_triggered": true
+      "event_id": "INC-AUTO-82961",
+      "timestamp": 1793573770,
+      "source_ip": "203.28.198.0",
+      "target_asset": "gateway-router-01",
+      "alert_message": "Brute Force SSH Login Attempt Detected",
+      "severity_score": 7.5,
+      "soar_triggered": false
     },
     {
-      "event_id": "INC-AUTO-92325",
-      "timestamp": 1793561943,
-      "source_ip": "120.30.0.0",
+      "event_id": "INC-AUTO-32699",
+      "timestamp": 1793574402,
+      "source_ip": "77.47.242.0",
+      "target_asset": "payment-gateway-api",
+      "alert_message": "Brute Force SSH Login Attempt Detected",
+      "severity_score": 7.5,
+      "soar_triggered": false
+    },
+    {
+      "event_id": "INC-AUTO-16731",
+      "timestamp": 1793573975,
+      "source_ip": "198.18.0.0",
+      "target_asset": "prod-worker-db-04",
+      "alert_message": "Brute Force SSH Login Attempt Detected",
+      "severity_score": 7.5,
+      "soar_triggered": false
+    },
+    {
+      "event_id": "INC-AUTO-85164",
+      "timestamp": 1793575255,
+      "source_ip": "103.233.243.0",
       "target_asset": "cluster-master-node",
-      "alert_message": "Living-off-the-Land (LotL) Suspicious PowerShell Spawn",
-      "severity_score": 8.8,
+      "alert_message": "Malicious C2 Beacon Ingress Connection",
+      "severity_score": 9.1,
       "soar_triggered": true
     }
   ]
