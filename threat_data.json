@@ -1,36 +1,54 @@
 {
-  "timestamp": 1793813356,
+  "timestamp": 1793832371,
   "status": "NOMINAL",
-  "active_threats": 3,
-  "blocked_ips": 1418369,
+  "active_threats": 5,
+  "blocked_ips": 1439051,
   "ci_runner": "Synapse-XDR Cloud Automation Engine",
   "pipeline": "secure",
   "events": [
     {
-      "event_id": "INC-AUTO-81201",
-      "timestamp": 1793812511,
-      "source_ip": "203.29.24.0",
-      "target_asset": "cluster-master-node",
+      "event_id": "INC-AUTO-90190",
+      "timestamp": 1793831645,
+      "source_ip": "198.51.100.0",
+      "target_asset": "payment-gateway-api",
+      "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
+      "severity_score": 9.2,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-15269",
+      "timestamp": 1793830124,
+      "source_ip": "203.17.238.0",
+      "target_asset": "auth-service-v2",
       "alert_message": "Brute Force SSH Login Attempt Detected",
       "severity_score": 7.5,
       "soar_triggered": false
     },
     {
-      "event_id": "INC-AUTO-67763",
-      "timestamp": 1793810329,
-      "source_ip": "203.14.200.0",
+      "event_id": "INC-AUTO-80890",
+      "timestamp": 1793830294,
+      "source_ip": "124.198.131.0",
       "target_asset": "prod-worker-db-04",
-      "alert_message": "Ransomware Process Activity: Unauthorized File Encryption",
-      "severity_score": 9.9,
+      "alert_message": "Malicious C2 Beacon Ingress Connection",
+      "severity_score": 9.1,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-95837",
-      "timestamp": 1793812631,
-      "source_ip": "23.94.252.0",
+      "event_id": "INC-AUTO-88453",
+      "timestamp": 1793829569,
+      "source_ip": "192.35.52.0",
+      "target_asset": "cluster-master-node",
+      "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
+      "severity_score": 9.2,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-52854",
+      "timestamp": 1793831743,
+      "source_ip": "203.13.25.0",
       "target_asset": "payment-gateway-api",
-      "alert_message": "Ransomware Process Activity: Unauthorized File Encryption",
-      "severity_score": 9.9,
+      "alert_message": "Distributed Denial of Service (DDoS) SYN Flood Attack",
+      "severity_score": 9.5,
       "soar_triggered": true
     }
   ]
