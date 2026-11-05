@@ -1,36 +1,54 @@
 {
-  "timestamp": 1793872473,
+  "timestamp": 1793900532,
   "status": "NOMINAL",
-  "active_threats": 3,
-  "blocked_ips": 1407114,
+  "active_threats": 5,
+  "blocked_ips": 1427028,
   "ci_runner": "Synapse-XDR Cloud Automation Engine",
   "pipeline": "secure",
   "events": [
     {
-      "event_id": "INC-AUTO-23662",
-      "timestamp": 1793868950,
-      "source_ip": "203.33.101.0",
-      "target_asset": "payment-gateway-api",
+      "event_id": "INC-AUTO-78798",
+      "timestamp": 1793898703,
+      "source_ip": "49.156.160.0",
+      "target_asset": "prod-worker-db-04",
+      "alert_message": "Distributed Denial of Service (DDoS) SYN Flood Attack",
+      "severity_score": 9.5,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-82029",
+      "timestamp": 1793900238,
+      "source_ip": "198.169.201.0",
+      "target_asset": "prod-worker-db-04",
       "alert_message": "Ransomware Process Activity: Unauthorized File Encryption",
       "severity_score": 9.9,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-33558",
-      "timestamp": 1793872271,
-      "source_ip": "144.48.196.0",
-      "target_asset": "payment-gateway-api",
-      "alert_message": "Living-off-the-Land (LotL) Suspicious PowerShell Spawn",
-      "severity_score": 8.8,
+      "event_id": "INC-AUTO-33151",
+      "timestamp": 1793898471,
+      "source_ip": "205.211.179.0",
+      "target_asset": "prod-worker-db-04",
+      "alert_message": "Brute Force SSH Login Attempt Detected",
+      "severity_score": 7.5,
+      "soar_triggered": false
+    },
+    {
+      "event_id": "INC-AUTO-43653",
+      "timestamp": 1793899399,
+      "source_ip": "203.32.131.0",
+      "target_asset": "prod-worker-db-04",
+      "alert_message": "Ransomware Process Activity: Unauthorized File Encryption",
+      "severity_score": 9.9,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-46825",
-      "timestamp": 1793870915,
-      "source_ip": "103.193.184.0",
-      "target_asset": "prod-worker-db-04",
-      "alert_message": "Living-off-the-Land (LotL) Suspicious PowerShell Spawn",
-      "severity_score": 8.8,
+      "event_id": "INC-AUTO-37170",
+      "timestamp": 1793898955,
+      "source_ip": "103.187.76.0",
+      "target_asset": "cluster-master-node",
+      "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
+      "severity_score": 9.2,
       "soar_triggered": true
     }
   ]
