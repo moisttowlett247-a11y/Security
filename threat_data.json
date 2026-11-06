@@ -1,81 +1,63 @@
 {
-  "timestamp": 1793919199,
+  "timestamp": 1793933711,
   "status": "NOMINAL",
-  "active_threats": 8,
-  "blocked_ips": 1421604,
+  "active_threats": 6,
+  "blocked_ips": 1426073,
   "ci_runner": "Synapse-XDR Cloud Automation Engine",
   "pipeline": "secure",
   "events": [
     {
-      "event_id": "INC-AUTO-57391",
-      "timestamp": 1793918640,
-      "source_ip": "131.108.16.0",
-      "target_asset": "gateway-router-01",
-      "alert_message": "Unauthorized Privilege Escalation via SUID Binary",
-      "severity_score": 8.6,
+      "event_id": "INC-AUTO-26797",
+      "timestamp": 1793931065,
+      "source_ip": "203.21.73.0",
+      "target_asset": "payment-gateway-api",
+      "alert_message": "Living-off-the-Land (LotL) Suspicious PowerShell Spawn",
+      "severity_score": 8.8,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-66791",
-      "timestamp": 1793916541,
-      "source_ip": "92.242.62.0",
-      "target_asset": "cluster-master-node",
-      "alert_message": "Brute Force SSH Login Attempt Detected",
-      "severity_score": 7.5,
-      "soar_triggered": false
-    },
-    {
-      "event_id": "INC-AUTO-29453",
-      "timestamp": 1793917741,
-      "source_ip": "203.217.175.0",
-      "target_asset": "gateway-router-01",
-      "alert_message": "Malicious C2 Beacon Ingress Connection",
-      "severity_score": 9.1,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-65285",
-      "timestamp": 1793918860,
-      "source_ip": "103.117.28.0",
+      "event_id": "INC-AUTO-50369",
+      "timestamp": 1793932549,
+      "source_ip": "76.74.40.0",
       "target_asset": "auth-service-v2",
-      "alert_message": "Distributed Denial of Service (DDoS) SYN Flood Attack",
-      "severity_score": 9.5,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-17170",
-      "timestamp": 1793918287,
-      "source_ip": "103.225.78.0",
-      "target_asset": "prod-worker-db-04",
-      "alert_message": "Unauthorized Privilege Escalation via SUID Binary",
-      "severity_score": 8.6,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-38058",
-      "timestamp": 1793917296,
-      "source_ip": "203.1.112.0",
-      "target_asset": "gateway-router-01",
-      "alert_message": "Distributed Denial of Service (DDoS) SYN Flood Attack",
-      "severity_score": 9.5,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-21548",
-      "timestamp": 1793916613,
-      "source_ip": "202.40.154.0",
-      "target_asset": "prod-worker-db-04",
       "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
       "severity_score": 9.2,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-25883",
-      "timestamp": 1793919051,
-      "source_ip": "203.19.8.0",
+      "event_id": "INC-AUTO-25855",
+      "timestamp": 1793933246,
+      "source_ip": "203.5.78.0",
+      "target_asset": "payment-gateway-api",
+      "alert_message": "Distributed Denial of Service (DDoS) SYN Flood Attack",
+      "severity_score": 9.5,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-10022",
+      "timestamp": 1793932827,
+      "source_ip": "192.160.229.0",
+      "target_asset": "auth-service-v2",
+      "alert_message": "Living-off-the-Land (LotL) Suspicious PowerShell Spawn",
+      "severity_score": 8.8,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-72495",
+      "timestamp": 1793931257,
+      "source_ip": "203.86.252.0",
       "target_asset": "cluster-master-node",
-      "alert_message": "Malicious C2 Beacon Ingress Connection",
-      "severity_score": 9.1,
+      "alert_message": "Ransomware Process Activity: Unauthorized File Encryption",
+      "severity_score": 9.9,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-52633",
+      "timestamp": 1793931653,
+      "source_ip": "203.56.242.0",
+      "target_asset": "cluster-master-node",
+      "alert_message": "Unauthorized Privilege Escalation via SUID Binary",
+      "severity_score": 8.6,
       "soar_triggered": true
     }
   ]
