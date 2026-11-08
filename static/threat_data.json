@@ -1,73 +1,37 @@
 {
-  "timestamp": 1794101656,
+  "timestamp": 1794124503,
   "status": "NOMINAL",
-  "active_threats": 7,
-  "blocked_ips": 1418547,
+  "active_threats": 3,
+  "blocked_ips": 1446305,
   "ci_runner": "Synapse-XDR Cloud Automation Engine",
   "pipeline": "secure",
   "events": [
     {
-      "event_id": "INC-AUTO-19458",
-      "timestamp": 1794100974,
-      "source_ip": "64.69.125.0",
-      "target_asset": "auth-service-v2",
-      "alert_message": "Brute Force SSH Login Attempt Detected",
-      "severity_score": 7.5,
-      "soar_triggered": false
-    },
-    {
-      "event_id": "INC-AUTO-63606",
-      "timestamp": 1794099582,
-      "source_ip": "103.73.218.0",
-      "target_asset": "gateway-router-01",
-      "alert_message": "Brute Force SSH Login Attempt Detected",
-      "severity_score": 7.5,
-      "soar_triggered": false
-    },
-    {
-      "event_id": "INC-AUTO-81366",
-      "timestamp": 1794101146,
-      "source_ip": "203.27.119.0",
-      "target_asset": "auth-service-v2",
-      "alert_message": "Living-off-the-Land (LotL) Suspicious PowerShell Spawn",
-      "severity_score": 8.8,
+      "event_id": "INC-AUTO-22344",
+      "timestamp": 1794124072,
+      "source_ip": "192.231.66.0",
+      "target_asset": "payment-gateway-api",
+      "alert_message": "Ransomware Process Activity: Unauthorized File Encryption",
+      "severity_score": 9.9,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-17360",
-      "timestamp": 1794098898,
-      "source_ip": "195.178.148.0",
-      "target_asset": "gateway-router-01",
-      "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
-      "severity_score": 9.2,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-83172",
-      "timestamp": 1794101414,
-      "source_ip": "204.147.240.0",
+      "event_id": "INC-AUTO-86624",
+      "timestamp": 1794121628,
+      "source_ip": "205.236.185.0",
       "target_asset": "cluster-master-node",
-      "alert_message": "Brute Force SSH Login Attempt Detected",
-      "severity_score": 7.5,
-      "soar_triggered": false
-    },
-    {
-      "event_id": "INC-AUTO-79677",
-      "timestamp": 1794101515,
-      "source_ip": "202.37.98.0",
-      "target_asset": "auth-service-v2",
-      "alert_message": "Distributed Denial of Service (DDoS) SYN Flood Attack",
-      "severity_score": 9.5,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-96263",
-      "timestamp": 1794100943,
-      "source_ip": "203.32.104.0",
-      "target_asset": "gateway-router-01",
       "alert_message": "Living-off-the-Land (LotL) Suspicious PowerShell Spawn",
       "severity_score": 8.8,
       "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-48439",
+      "timestamp": 1794124380,
+      "source_ip": "203.30.218.0",
+      "target_asset": "payment-gateway-api",
+      "alert_message": "Brute Force SSH Login Attempt Detected",
+      "severity_score": 7.5,
+      "soar_triggered": false
     }
   ]
 }
