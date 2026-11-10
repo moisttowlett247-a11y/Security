@@ -1,45 +1,45 @@
 {
-  "timestamp": 1794254417,
+  "timestamp": 1794278072,
   "status": "NOMINAL",
   "active_threats": 4,
-  "blocked_ips": 1420766,
+  "blocked_ips": 1406810,
   "ci_runner": "Synapse-XDR Cloud Automation Engine",
   "pipeline": "secure",
   "events": [
     {
-      "event_id": "INC-AUTO-21236",
-      "timestamp": 1794252501,
-      "source_ip": "199.198.176.0",
+      "event_id": "INC-AUTO-31720",
+      "timestamp": 1794276293,
+      "source_ip": "103.185.96.0",
+      "target_asset": "gateway-router-01",
+      "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
+      "severity_score": 9.2,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-35569",
+      "timestamp": 1794277449,
+      "source_ip": "203.17.186.0",
       "target_asset": "prod-worker-db-04",
-      "alert_message": "Ransomware Process Activity: Unauthorized File Encryption",
-      "severity_score": 9.9,
+      "alert_message": "Unauthorized Privilege Escalation via SUID Binary",
+      "severity_score": 8.6,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-69012",
-      "timestamp": 1794254119,
-      "source_ip": "192.133.21.0",
-      "target_asset": "auth-service-v2",
-      "alert_message": "Ransomware Process Activity: Unauthorized File Encryption",
-      "severity_score": 9.9,
+      "event_id": "INC-AUTO-75503",
+      "timestamp": 1794276405,
+      "source_ip": "203.29.236.0",
+      "target_asset": "cluster-master-node",
+      "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
+      "severity_score": 9.2,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-71737",
-      "timestamp": 1794254056,
-      "source_ip": "163.61.194.0",
-      "target_asset": "payment-gateway-api",
+      "event_id": "INC-AUTO-83214",
+      "timestamp": 1794277419,
+      "source_ip": "103.238.218.0",
+      "target_asset": "prod-worker-db-04",
       "alert_message": "Distributed Denial of Service (DDoS) SYN Flood Attack",
       "severity_score": 9.5,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-29071",
-      "timestamp": 1794251676,
-      "source_ip": "37.77.150.0",
-      "target_asset": "payment-gateway-api",
-      "alert_message": "Living-off-the-Land (LotL) Suspicious PowerShell Spawn",
-      "severity_score": 8.8,
       "soar_triggered": true
     }
   ]
