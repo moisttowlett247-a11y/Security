@@ -1,37 +1,55 @@
 {
-  "timestamp": 1794389163,
+  "timestamp": 1794417518,
   "status": "NOMINAL",
-  "active_threats": 3,
-  "blocked_ips": 1411206,
+  "active_threats": 5,
+  "blocked_ips": 1422552,
   "ci_runner": "Synapse-XDR Cloud Automation Engine",
   "pipeline": "secure",
   "events": [
     {
-      "event_id": "INC-AUTO-26143",
-      "timestamp": 1794387267,
-      "source_ip": "192.152.119.0",
-      "target_asset": "auth-service-v2",
+      "event_id": "INC-AUTO-88107",
+      "timestamp": 1794414094,
+      "source_ip": "178.20.210.0",
+      "target_asset": "gateway-router-01",
+      "alert_message": "Distributed Denial of Service (DDoS) SYN Flood Attack",
+      "severity_score": 9.5,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-42454",
+      "timestamp": 1794416267,
+      "source_ip": "103.237.85.0",
+      "target_asset": "payment-gateway-api",
+      "alert_message": "Malicious C2 Beacon Ingress Connection",
+      "severity_score": 9.1,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-15603",
+      "timestamp": 1794416456,
+      "source_ip": "182.161.52.0",
+      "target_asset": "gateway-router-01",
       "alert_message": "Unauthorized Privilege Escalation via SUID Binary",
       "severity_score": 8.6,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-80188",
-      "timestamp": 1794387012,
-      "source_ip": "103.177.198.0",
-      "target_asset": "gateway-router-01",
-      "alert_message": "Malicious C2 Beacon Ingress Connection",
-      "severity_score": 9.1,
+      "event_id": "INC-AUTO-72320",
+      "timestamp": 1794415806,
+      "source_ip": "205.196.67.0",
+      "target_asset": "prod-worker-db-04",
+      "alert_message": "Living-off-the-Land (LotL) Suspicious PowerShell Spawn",
+      "severity_score": 8.8,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-84817",
-      "timestamp": 1794386335,
-      "source_ip": "203.27.252.0",
-      "target_asset": "gateway-router-01",
-      "alert_message": "Malicious C2 Beacon Ingress Connection",
-      "severity_score": 9.1,
-      "soar_triggered": true
+      "event_id": "INC-AUTO-92656",
+      "timestamp": 1794416812,
+      "source_ip": "160.30.250.0",
+      "target_asset": "auth-service-v2",
+      "alert_message": "Brute Force SSH Login Attempt Detected",
+      "severity_score": 7.5,
+      "soar_triggered": false
     }
   ]
 }
