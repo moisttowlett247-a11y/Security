@@ -1,81 +1,63 @@
 {
-  "timestamp": 1794456037,
+  "timestamp": 1794486748,
   "status": "NOMINAL",
-  "active_threats": 8,
-  "blocked_ips": 1419009,
+  "active_threats": 6,
+  "blocked_ips": 1441441,
   "ci_runner": "Synapse-XDR Cloud Automation Engine",
   "pipeline": "secure",
   "events": [
     {
-      "event_id": "INC-AUTO-29971",
-      "timestamp": 1794453590,
-      "source_ip": "203.31.215.0",
-      "target_asset": "auth-service-v2",
+      "event_id": "INC-AUTO-26074",
+      "timestamp": 1794483547,
+      "source_ip": "103.140.242.0",
+      "target_asset": "prod-worker-db-04",
+      "alert_message": "Distributed Denial of Service (DDoS) SYN Flood Attack",
+      "severity_score": 9.5,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-56962",
+      "timestamp": 1794484270,
+      "source_ip": "103.23.12.0",
+      "target_asset": "prod-worker-db-04",
       "alert_message": "Unauthorized Privilege Escalation via SUID Binary",
       "severity_score": 8.6,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-35121",
-      "timestamp": 1794453602,
-      "source_ip": "65.216.208.0",
-      "target_asset": "payment-gateway-api",
+      "event_id": "INC-AUTO-24876",
+      "timestamp": 1794486704,
+      "source_ip": "107.182.240.0",
+      "target_asset": "gateway-router-01",
       "alert_message": "Malicious C2 Beacon Ingress Connection",
       "severity_score": 9.1,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-39045",
-      "timestamp": 1794454545,
-      "source_ip": "203.27.82.0",
-      "target_asset": "gateway-router-01",
-      "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
-      "severity_score": 9.2,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-83949",
-      "timestamp": 1794453462,
-      "source_ip": "45.135.193.0",
-      "target_asset": "prod-worker-db-04",
-      "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
-      "severity_score": 9.2,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-14400",
-      "timestamp": 1794455576,
-      "source_ip": "193.169.194.0",
-      "target_asset": "cluster-master-node",
-      "alert_message": "Distributed Denial of Service (DDoS) SYN Flood Attack",
-      "severity_score": 9.5,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-35877",
-      "timestamp": 1794453176,
-      "source_ip": "204.238.137.0",
-      "target_asset": "auth-service-v2",
-      "alert_message": "Brute Force SSH Login Attempt Detected",
-      "severity_score": 7.5,
-      "soar_triggered": false
-    },
-    {
-      "event_id": "INC-AUTO-62623",
-      "timestamp": 1794452755,
-      "source_ip": "192.133.21.0",
-      "target_asset": "cluster-master-node",
+      "event_id": "INC-AUTO-90483",
+      "timestamp": 1794483358,
+      "source_ip": "203.24.154.0",
+      "target_asset": "payment-gateway-api",
       "alert_message": "Ransomware Process Activity: Unauthorized File Encryption",
       "severity_score": 9.9,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-92805",
-      "timestamp": 1794454096,
-      "source_ip": "203.55.154.0",
+      "event_id": "INC-AUTO-97907",
+      "timestamp": 1794484184,
+      "source_ip": "202.136.92.0",
+      "target_asset": "cluster-master-node",
+      "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
+      "severity_score": 9.2,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-21855",
+      "timestamp": 1794485366,
+      "source_ip": "203.23.126.0",
       "target_asset": "gateway-router-01",
-      "alert_message": "Distributed Denial of Service (DDoS) SYN Flood Attack",
-      "severity_score": 9.5,
+      "alert_message": "Ransomware Process Activity: Unauthorized File Encryption",
+      "severity_score": 9.9,
       "soar_triggered": true
     }
   ]
