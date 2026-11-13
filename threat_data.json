@@ -1,43 +1,43 @@
 {
-  "timestamp": 1794514911,
+  "timestamp": 1794532443,
   "status": "NOMINAL",
   "active_threats": 4,
-  "blocked_ips": 1407309,
+  "blocked_ips": 1444318,
   "ci_runner": "Synapse-XDR Cloud Automation Engine",
   "pipeline": "secure",
   "events": [
     {
-      "event_id": "INC-AUTO-37140",
-      "timestamp": 1794513840,
-      "source_ip": "192.189.24.0",
-      "target_asset": "payment-gateway-api",
+      "event_id": "INC-AUTO-34741",
+      "timestamp": 1794529998,
+      "source_ip": "202.37.28.0",
+      "target_asset": "auth-service-v2",
       "alert_message": "Brute Force SSH Login Attempt Detected",
       "severity_score": 7.5,
       "soar_triggered": false
     },
     {
-      "event_id": "INC-AUTO-93501",
-      "timestamp": 1794512626,
-      "source_ip": "203.17.92.0",
-      "target_asset": "auth-service-v2",
+      "event_id": "INC-AUTO-40582",
+      "timestamp": 1794529244,
+      "source_ip": "103.38.145.0",
+      "target_asset": "gateway-router-01",
+      "alert_message": "Distributed Denial of Service (DDoS) SYN Flood Attack",
+      "severity_score": 9.5,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-40605",
+      "timestamp": 1794531868,
+      "source_ip": "203.8.202.0",
+      "target_asset": "prod-worker-db-04",
       "alert_message": "Unauthorized Privilege Escalation via SUID Binary",
       "severity_score": 8.6,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-19601",
-      "timestamp": 1794511339,
-      "source_ip": "137.42.0.0",
-      "target_asset": "payment-gateway-api",
-      "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
-      "severity_score": 9.2,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-29544",
-      "timestamp": 1794513823,
-      "source_ip": "192.131.90.0",
-      "target_asset": "prod-worker-db-04",
+      "event_id": "INC-AUTO-84388",
+      "timestamp": 1794528906,
+      "source_ip": "199.26.251.0",
+      "target_asset": "gateway-router-01",
       "alert_message": "Living-off-the-Land (LotL) Suspicious PowerShell Spawn",
       "severity_score": 8.8,
       "soar_triggered": true
