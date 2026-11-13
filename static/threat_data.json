@@ -1,45 +1,63 @@
 {
-  "timestamp": 1794532443,
+  "timestamp": 1794556681,
   "status": "NOMINAL",
-  "active_threats": 4,
-  "blocked_ips": 1444318,
+  "active_threats": 6,
+  "blocked_ips": 1427241,
   "ci_runner": "Synapse-XDR Cloud Automation Engine",
   "pipeline": "secure",
   "events": [
     {
-      "event_id": "INC-AUTO-34741",
-      "timestamp": 1794529998,
-      "source_ip": "202.37.28.0",
-      "target_asset": "auth-service-v2",
-      "alert_message": "Brute Force SSH Login Attempt Detected",
-      "severity_score": 7.5,
-      "soar_triggered": false
-    },
-    {
-      "event_id": "INC-AUTO-40582",
-      "timestamp": 1794529244,
-      "source_ip": "103.38.145.0",
-      "target_asset": "gateway-router-01",
-      "alert_message": "Distributed Denial of Service (DDoS) SYN Flood Attack",
-      "severity_score": 9.5,
+      "event_id": "INC-AUTO-54277",
+      "timestamp": 1794554821,
+      "source_ip": "202.40.32.0",
+      "target_asset": "prod-worker-db-04",
+      "alert_message": "Malicious C2 Beacon Ingress Connection",
+      "severity_score": 9.1,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-40605",
-      "timestamp": 1794531868,
-      "source_ip": "203.8.202.0",
+      "event_id": "INC-AUTO-29961",
+      "timestamp": 1794554459,
+      "source_ip": "203.26.174.0",
+      "target_asset": "auth-service-v2",
+      "alert_message": "Unauthorized Privilege Escalation via SUID Binary",
+      "severity_score": 8.6,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-68393",
+      "timestamp": 1794555748,
+      "source_ip": "203.27.54.0",
+      "target_asset": "auth-service-v2",
+      "alert_message": "Malicious C2 Beacon Ingress Connection",
+      "severity_score": 9.1,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-35552",
+      "timestamp": 1794554348,
+      "source_ip": "176.126.194.0",
       "target_asset": "prod-worker-db-04",
       "alert_message": "Unauthorized Privilege Escalation via SUID Binary",
       "severity_score": 8.6,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-84388",
-      "timestamp": 1794528906,
-      "source_ip": "199.26.251.0",
-      "target_asset": "gateway-router-01",
-      "alert_message": "Living-off-the-Land (LotL) Suspicious PowerShell Spawn",
-      "severity_score": 8.8,
+      "event_id": "INC-AUTO-11056",
+      "timestamp": 1794553211,
+      "source_ip": "203.57.244.0",
+      "target_asset": "payment-gateway-api",
+      "alert_message": "Distributed Denial of Service (DDoS) SYN Flood Attack",
+      "severity_score": 9.5,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-59560",
+      "timestamp": 1794554985,
+      "source_ip": "203.15.66.0",
+      "target_asset": "payment-gateway-api",
+      "alert_message": "Distributed Denial of Service (DDoS) SYN Flood Attack",
+      "severity_score": 9.5,
       "soar_triggered": true
     }
   ]
