@@ -1,78 +1,42 @@
 {
-  "timestamp": 1794711141,
+  "timestamp": 1794736748,
   "status": "NOMINAL",
-  "active_threats": 8,
-  "blocked_ips": 1412009,
+  "active_threats": 4,
+  "blocked_ips": 1417790,
   "ci_runner": "Synapse-XDR Cloud Automation Engine",
   "pipeline": "secure",
   "events": [
     {
-      "event_id": "INC-AUTO-56652",
-      "timestamp": 1794707872,
-      "source_ip": "192.109.138.0",
+      "event_id": "INC-AUTO-50392",
+      "timestamp": 1794736113,
+      "source_ip": "203.0.176.0",
+      "target_asset": "prod-worker-db-04",
+      "alert_message": "Malicious C2 Beacon Ingress Connection",
+      "severity_score": 9.1,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-22366",
+      "timestamp": 1794735194,
+      "source_ip": "209.159.128.0",
       "target_asset": "gateway-router-01",
-      "alert_message": "Living-off-the-Land (LotL) Suspicious PowerShell Spawn",
-      "severity_score": 8.8,
+      "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
+      "severity_score": 9.2,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-49637",
-      "timestamp": 1794708559,
-      "source_ip": "168.206.0.0",
-      "target_asset": "payment-gateway-api",
-      "alert_message": "Ransomware Process Activity: Unauthorized File Encryption",
-      "severity_score": 9.9,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-19254",
-      "timestamp": 1794708690,
-      "source_ip": "202.36.176.0",
+      "event_id": "INC-AUTO-38433",
+      "timestamp": 1794736358,
+      "source_ip": "204.27.218.0",
       "target_asset": "cluster-master-node",
       "alert_message": "Brute Force SSH Login Attempt Detected",
       "severity_score": 7.5,
       "soar_triggered": false
     },
     {
-      "event_id": "INC-AUTO-71460",
-      "timestamp": 1794711081,
-      "source_ip": "168.198.0.0",
-      "target_asset": "cluster-master-node",
-      "alert_message": "Distributed Denial of Service (DDoS) SYN Flood Attack",
-      "severity_score": 9.5,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-54481",
-      "timestamp": 1794708285,
-      "source_ip": "202.50.159.0",
-      "target_asset": "prod-worker-db-04",
-      "alert_message": "Unauthorized Privilege Escalation via SUID Binary",
-      "severity_score": 8.6,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-66931",
-      "timestamp": 1794710693,
-      "source_ip": "203.30.180.0",
-      "target_asset": "cluster-master-node",
-      "alert_message": "Living-off-the-Land (LotL) Suspicious PowerShell Spawn",
-      "severity_score": 8.8,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-14389",
-      "timestamp": 1794709038,
-      "source_ip": "203.16.54.0",
-      "target_asset": "auth-service-v2",
-      "alert_message": "Malicious C2 Beacon Ingress Connection",
-      "severity_score": 9.1,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-81210",
-      "timestamp": 1794710670,
-      "source_ip": "203.31.26.0",
+      "event_id": "INC-AUTO-72044",
+      "timestamp": 1794735273,
+      "source_ip": "199.248.60.0",
       "target_asset": "payment-gateway-api",
       "alert_message": "Brute Force SSH Login Attempt Detected",
       "severity_score": 7.5,
