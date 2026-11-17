@@ -1,72 +1,54 @@
 {
-  "timestamp": 1794906151,
+  "timestamp": 1794939994,
   "status": "NOMINAL",
-  "active_threats": 7,
-  "blocked_ips": 1441945,
+  "active_threats": 5,
+  "blocked_ips": 1447255,
   "ci_runner": "Synapse-XDR Cloud Automation Engine",
   "pipeline": "secure",
   "events": [
     {
-      "event_id": "INC-AUTO-76513",
-      "timestamp": 1794903992,
-      "source_ip": "185.116.175.0",
-      "target_asset": "cluster-master-node",
-      "alert_message": "Ransomware Process Activity: Unauthorized File Encryption",
-      "severity_score": 9.9,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-28548",
-      "timestamp": 1794903079,
-      "source_ip": "202.37.132.0",
+      "event_id": "INC-AUTO-54218",
+      "timestamp": 1794937698,
+      "source_ip": "203.57.22.0",
       "target_asset": "cluster-master-node",
       "alert_message": "Living-off-the-Land (LotL) Suspicious PowerShell Spawn",
       "severity_score": 8.8,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-73374",
-      "timestamp": 1794904905,
-      "source_ip": "203.55.159.0",
+      "event_id": "INC-AUTO-74472",
+      "timestamp": 1794938184,
+      "source_ip": "203.62.192.0",
+      "target_asset": "prod-worker-db-04",
+      "alert_message": "Distributed Denial of Service (DDoS) SYN Flood Attack",
+      "severity_score": 9.5,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-71622",
+      "timestamp": 1794939619,
+      "source_ip": "192.67.248.0",
       "target_asset": "auth-service-v2",
       "alert_message": "Unauthorized Privilege Escalation via SUID Binary",
       "severity_score": 8.6,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-61383",
-      "timestamp": 1794904728,
-      "source_ip": "103.190.56.0",
-      "target_asset": "cluster-master-node",
-      "alert_message": "Living-off-the-Land (LotL) Suspicious PowerShell Spawn",
-      "severity_score": 8.8,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-36337",
-      "timestamp": 1794904661,
-      "source_ip": "103.115.152.0",
-      "target_asset": "auth-service-v2",
-      "alert_message": "Brute Force SSH Login Attempt Detected",
-      "severity_score": 7.5,
-      "soar_triggered": false
-    },
-    {
-      "event_id": "INC-AUTO-65482",
-      "timestamp": 1794904943,
-      "source_ip": "203.26.86.0",
-      "target_asset": "payment-gateway-api",
-      "alert_message": "Unauthorized Privilege Escalation via SUID Binary",
-      "severity_score": 8.6,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-72614",
-      "timestamp": 1794904780,
-      "source_ip": "199.120.12.0",
+      "event_id": "INC-AUTO-31259",
+      "timestamp": 1794936832,
+      "source_ip": "103.57.90.0",
       "target_asset": "auth-service-v2",
       "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
       "severity_score": 9.2,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-52427",
+      "timestamp": 1794937277,
+      "source_ip": "204.128.151.0",
+      "target_asset": "payment-gateway-api",
+      "alert_message": "Ransomware Process Activity: Unauthorized File Encryption",
+      "severity_score": 9.9,
       "soar_triggered": true
     }
   ]
