@@ -1,72 +1,36 @@
 {
-  "timestamp": 1794990419,
+  "timestamp": 1795022687,
   "status": "NOMINAL",
-  "active_threats": 7,
-  "blocked_ips": 1453003,
+  "active_threats": 3,
+  "blocked_ips": 1443525,
   "ci_runner": "Synapse-XDR Cloud Automation Engine",
   "pipeline": "secure",
   "events": [
     {
-      "event_id": "INC-AUTO-16402",
-      "timestamp": 1794988936,
-      "source_ip": "192.135.222.0",
-      "target_asset": "prod-worker-db-04",
-      "alert_message": "Malicious C2 Beacon Ingress Connection",
-      "severity_score": 9.1,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-76878",
-      "timestamp": 1794989699,
-      "source_ip": "203.27.8.0",
-      "target_asset": "cluster-master-node",
-      "alert_message": "Living-off-the-Land (LotL) Suspicious PowerShell Spawn",
-      "severity_score": 8.8,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-39547",
-      "timestamp": 1794987358,
-      "source_ip": "202.37.55.0",
-      "target_asset": "prod-worker-db-04",
-      "alert_message": "Ransomware Process Activity: Unauthorized File Encryption",
-      "severity_score": 9.9,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-77849",
-      "timestamp": 1794990067,
-      "source_ip": "103.148.42.0",
+      "event_id": "INC-AUTO-15430",
+      "timestamp": 1795019390,
+      "source_ip": "192.55.209.0",
       "target_asset": "auth-service-v2",
-      "alert_message": "Malicious C2 Beacon Ingress Connection",
-      "severity_score": 9.1,
+      "alert_message": "Distributed Denial of Service (DDoS) SYN Flood Attack",
+      "severity_score": 9.5,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-83334",
-      "timestamp": 1794987276,
-      "source_ip": "103.166.2.0",
-      "target_asset": "auth-service-v2",
-      "alert_message": "Living-off-the-Land (LotL) Suspicious PowerShell Spawn",
-      "severity_score": 8.8,
+      "event_id": "INC-AUTO-91519",
+      "timestamp": 1795020820,
+      "source_ip": "192.55.220.0",
+      "target_asset": "payment-gateway-api",
+      "alert_message": "Unauthorized Privilege Escalation via SUID Binary",
+      "severity_score": 8.6,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-64324",
-      "timestamp": 1794988720,
-      "source_ip": "203.32.154.0",
+      "event_id": "INC-AUTO-74749",
+      "timestamp": 1795019134,
+      "source_ip": "27.100.28.0",
       "target_asset": "cluster-master-node",
-      "alert_message": "Ransomware Process Activity: Unauthorized File Encryption",
-      "severity_score": 9.9,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-23627",
-      "timestamp": 1794989867,
-      "source_ip": "103.168.247.0",
-      "target_asset": "cluster-master-node",
-      "alert_message": "Malicious C2 Beacon Ingress Connection",
-      "severity_score": 9.1,
+      "alert_message": "Unauthorized Privilege Escalation via SUID Binary",
+      "severity_score": 8.6,
       "soar_triggered": true
     }
   ]
