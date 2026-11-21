@@ -1,55 +1,46 @@
 {
-  "timestamp": 1795200041,
+  "timestamp": 1795220152,
   "status": "NOMINAL",
-  "active_threats": 5,
-  "blocked_ips": 1412094,
+  "active_threats": 4,
+  "blocked_ips": 1418411,
   "ci_runner": "Synapse-XDR Cloud Automation Engine",
   "pipeline": "secure",
   "events": [
     {
-      "event_id": "INC-AUTO-48485",
-      "timestamp": 1795198485,
-      "source_ip": "192.207.187.0",
-      "target_asset": "prod-worker-db-04",
-      "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
-      "severity_score": 9.2,
+      "event_id": "INC-AUTO-59848",
+      "timestamp": 1795219595,
+      "source_ip": "203.19.236.0",
+      "target_asset": "payment-gateway-api",
+      "alert_message": "Unauthorized Privilege Escalation via SUID Binary",
+      "severity_score": 8.6,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-73931",
-      "timestamp": 1795197358,
-      "source_ip": "103.184.84.0",
-      "target_asset": "auth-service-v2",
-      "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
-      "severity_score": 9.2,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-46389",
-      "timestamp": 1795197616,
-      "source_ip": "203.55.200.0",
-      "target_asset": "prod-worker-db-04",
+      "event_id": "INC-AUTO-44758",
+      "timestamp": 1795218685,
+      "source_ip": "202.173.4.0",
+      "target_asset": "payment-gateway-api",
       "alert_message": "Malicious C2 Beacon Ingress Connection",
       "severity_score": 9.1,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-69435",
-      "timestamp": 1795198156,
-      "source_ip": "150.22.128.0",
+      "event_id": "INC-AUTO-70201",
+      "timestamp": 1795219483,
+      "source_ip": "103.154.50.0",
       "target_asset": "gateway-router-01",
       "alert_message": "Brute Force SSH Login Attempt Detected",
       "severity_score": 7.5,
       "soar_triggered": false
     },
     {
-      "event_id": "INC-AUTO-47951",
-      "timestamp": 1795199774,
-      "source_ip": "103.178.98.0",
+      "event_id": "INC-AUTO-26036",
+      "timestamp": 1795219925,
+      "source_ip": "203.25.181.0",
       "target_asset": "prod-worker-db-04",
-      "alert_message": "Living-off-the-Land (LotL) Suspicious PowerShell Spawn",
-      "severity_score": 8.8,
-      "soar_triggered": true
+      "alert_message": "Brute Force SSH Login Attempt Detected",
+      "severity_score": 7.5,
+      "soar_triggered": false
     }
   ]
 }
