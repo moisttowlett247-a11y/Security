@@ -1,36 +1,63 @@
 {
-  "timestamp": 1795361427,
+  "timestamp": 1795381896,
   "status": "NOMINAL",
-  "active_threats": 3,
-  "blocked_ips": 1417455,
+  "active_threats": 6,
+  "blocked_ips": 1418264,
   "ci_runner": "Synapse-XDR Cloud Automation Engine",
   "pipeline": "secure",
   "events": [
     {
-      "event_id": "INC-AUTO-97917",
-      "timestamp": 1795359622,
-      "source_ip": "198.22.47.0",
-      "target_asset": "auth-service-v2",
+      "event_id": "INC-AUTO-44258",
+      "timestamp": 1795380361,
+      "source_ip": "203.24.121.0",
+      "target_asset": "gateway-router-01",
+      "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
+      "severity_score": 9.2,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-49983",
+      "timestamp": 1795378998,
+      "source_ip": "203.34.94.0",
+      "target_asset": "payment-gateway-api",
+      "alert_message": "Living-off-the-Land (LotL) Suspicious PowerShell Spawn",
+      "severity_score": 8.8,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-74698",
+      "timestamp": 1795379678,
+      "source_ip": "77.83.207.0",
+      "target_asset": "cluster-master-node",
       "alert_message": "Ransomware Process Activity: Unauthorized File Encryption",
       "severity_score": 9.9,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-44815",
-      "timestamp": 1795360740,
-      "source_ip": "209.79.220.0",
+      "event_id": "INC-AUTO-48301",
+      "timestamp": 1795379856,
+      "source_ip": "192.207.169.0",
       "target_asset": "cluster-master-node",
-      "alert_message": "Brute Force SSH Login Attempt Detected",
-      "severity_score": 7.5,
-      "soar_triggered": false
+      "alert_message": "Distributed Denial of Service (DDoS) SYN Flood Attack",
+      "severity_score": 9.5,
+      "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-45984",
-      "timestamp": 1795358496,
-      "source_ip": "103.14.200.0",
-      "target_asset": "gateway-router-01",
-      "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
-      "severity_score": 9.2,
+      "event_id": "INC-AUTO-48768",
+      "timestamp": 1795379446,
+      "source_ip": "203.56.166.0",
+      "target_asset": "payment-gateway-api",
+      "alert_message": "Ransomware Process Activity: Unauthorized File Encryption",
+      "severity_score": 9.9,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-21199",
+      "timestamp": 1795379576,
+      "source_ip": "103.104.0.0",
+      "target_asset": "payment-gateway-api",
+      "alert_message": "Living-off-the-Land (LotL) Suspicious PowerShell Spawn",
+      "severity_score": 8.8,
       "soar_triggered": true
     }
   ]
