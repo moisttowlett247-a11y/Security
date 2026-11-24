@@ -1,54 +1,54 @@
 {
-  "timestamp": 1795470202,
+  "timestamp": 1795498354,
   "status": "NOMINAL",
   "active_threats": 5,
-  "blocked_ips": 1436402,
+  "blocked_ips": 1425038,
   "ci_runner": "Synapse-XDR Cloud Automation Engine",
   "pipeline": "secure",
   "events": [
     {
-      "event_id": "INC-AUTO-99800",
-      "timestamp": 1795469838,
-      "source_ip": "103.182.214.0",
-      "target_asset": "cluster-master-node",
-      "alert_message": "Ransomware Process Activity: Unauthorized File Encryption",
-      "severity_score": 9.9,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-15717",
-      "timestamp": 1795468980,
-      "source_ip": "103.185.112.0",
+      "event_id": "INC-AUTO-21352",
+      "timestamp": 1795495165,
+      "source_ip": "81.94.150.0",
       "target_asset": "auth-service-v2",
       "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
       "severity_score": 9.2,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-65975",
-      "timestamp": 1795469736,
-      "source_ip": "192.5.56.0",
-      "target_asset": "cluster-master-node",
+      "event_id": "INC-AUTO-83691",
+      "timestamp": 1795497805,
+      "source_ip": "103.184.80.0",
+      "target_asset": "prod-worker-db-04",
       "alert_message": "Living-off-the-Land (LotL) Suspicious PowerShell Spawn",
       "severity_score": 8.8,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-39386",
-      "timestamp": 1795467329,
-      "source_ip": "46.29.26.0",
+      "event_id": "INC-AUTO-71342",
+      "timestamp": 1795495582,
+      "source_ip": "131.108.16.0",
+      "target_asset": "payment-gateway-api",
+      "alert_message": "Unauthorized Privilege Escalation via SUID Binary",
+      "severity_score": 8.6,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-85604",
+      "timestamp": 1795495969,
+      "source_ip": "203.14.178.0",
       "target_asset": "prod-worker-db-04",
       "alert_message": "Malicious C2 Beacon Ingress Connection",
       "severity_score": 9.1,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-71424",
-      "timestamp": 1795466734,
-      "source_ip": "203.26.3.0",
-      "target_asset": "cluster-master-node",
-      "alert_message": "Ransomware Process Activity: Unauthorized File Encryption",
-      "severity_score": 9.9,
+      "event_id": "INC-AUTO-89817",
+      "timestamp": 1795496095,
+      "source_ip": "122.102.16.0",
+      "target_asset": "payment-gateway-api",
+      "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
+      "severity_score": 9.2,
       "soar_triggered": true
     }
   ]
