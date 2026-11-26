@@ -1,34 +1,52 @@
 {
-  "timestamp": 1795690416,
+  "timestamp": 1795722787,
   "status": "NOMINAL",
-  "active_threats": 3,
-  "blocked_ips": 1445029,
+  "active_threats": 5,
+  "blocked_ips": 1417310,
   "ci_runner": "Synapse-XDR Cloud Automation Engine",
   "pipeline": "secure",
   "events": [
     {
-      "event_id": "INC-AUTO-14747",
-      "timestamp": 1795689055,
-      "source_ip": "203.23.19.0",
-      "target_asset": "gateway-router-01",
+      "event_id": "INC-AUTO-32467",
+      "timestamp": 1795721171,
+      "source_ip": "202.37.18.0",
+      "target_asset": "auth-service-v2",
       "alert_message": "Living-off-the-Land (LotL) Suspicious PowerShell Spawn",
       "severity_score": 8.8,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-35985",
-      "timestamp": 1795687150,
-      "source_ip": "103.27.248.0",
-      "target_asset": "payment-gateway-api",
+      "event_id": "INC-AUTO-79890",
+      "timestamp": 1795720485,
+      "source_ip": "203.31.186.0",
+      "target_asset": "prod-worker-db-04",
+      "alert_message": "Distributed Denial of Service (DDoS) SYN Flood Attack",
+      "severity_score": 9.5,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-25566",
+      "timestamp": 1795719864,
+      "source_ip": "103.182.114.0",
+      "target_asset": "cluster-master-node",
       "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
       "severity_score": 9.2,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-53339",
-      "timestamp": 1795688972,
-      "source_ip": "192.100.88.0",
-      "target_asset": "payment-gateway-api",
+      "event_id": "INC-AUTO-43667",
+      "timestamp": 1795722092,
+      "source_ip": "203.32.128.0",
+      "target_asset": "auth-service-v2",
+      "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
+      "severity_score": 9.2,
+      "soar_triggered": true
+    },
+    {
+      "event_id": "INC-AUTO-85260",
+      "timestamp": 1795721143,
+      "source_ip": "203.25.72.0",
+      "target_asset": "cluster-master-node",
       "alert_message": "Ransomware Process Activity: Unauthorized File Encryption",
       "severity_score": 9.9,
       "soar_triggered": true
