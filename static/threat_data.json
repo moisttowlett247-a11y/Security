@@ -1,70 +1,34 @@
 {
-  "timestamp": 1795809236,
+  "timestamp": 1795832157,
   "status": "NOMINAL",
-  "active_threats": 7,
-  "blocked_ips": 1441598,
+  "active_threats": 3,
+  "blocked_ips": 1412107,
   "ci_runner": "Synapse-XDR Cloud Automation Engine",
   "pipeline": "secure",
   "events": [
     {
-      "event_id": "INC-AUTO-39832",
-      "timestamp": 1795806995,
-      "source_ip": "203.7.194.0",
-      "target_asset": "prod-worker-db-04",
+      "event_id": "INC-AUTO-48121",
+      "timestamp": 1795829430,
+      "source_ip": "203.30.218.0",
+      "target_asset": "payment-gateway-api",
       "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
       "severity_score": 9.2,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-24615",
-      "timestamp": 1795806437,
-      "source_ip": "199.166.214.0",
+      "event_id": "INC-AUTO-57902",
+      "timestamp": 1795831927,
+      "source_ip": "185.245.62.0",
       "target_asset": "cluster-master-node",
       "alert_message": "Unauthorized Privilege Escalation via SUID Binary",
       "severity_score": 8.6,
       "soar_triggered": true
     },
     {
-      "event_id": "INC-AUTO-84042",
-      "timestamp": 1795808650,
-      "source_ip": "205.196.104.0",
-      "target_asset": "auth-service-v2",
-      "alert_message": "SQL Injection Vector Exploit via /api/v2/users",
-      "severity_score": 9.2,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-20512",
-      "timestamp": 1795808973,
-      "source_ip": "64.92.224.0",
-      "target_asset": "gateway-router-01",
-      "alert_message": "Living-off-the-Land (LotL) Suspicious PowerShell Spawn",
-      "severity_score": 8.8,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-37473",
-      "timestamp": 1795807840,
-      "source_ip": "87.121.84.0",
+      "event_id": "INC-AUTO-68745",
+      "timestamp": 1795829252,
+      "source_ip": "103.188.228.0",
       "target_asset": "payment-gateway-api",
-      "alert_message": "Ransomware Process Activity: Unauthorized File Encryption",
-      "severity_score": 9.9,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-24230",
-      "timestamp": 1795806885,
-      "source_ip": "202.49.142.0",
-      "target_asset": "gateway-router-01",
-      "alert_message": "Malicious C2 Beacon Ingress Connection",
-      "severity_score": 9.1,
-      "soar_triggered": true
-    },
-    {
-      "event_id": "INC-AUTO-99471",
-      "timestamp": 1795806224,
-      "source_ip": "199.164.242.0",
-      "target_asset": "cluster-master-node",
       "alert_message": "Unauthorized Privilege Escalation via SUID Binary",
       "severity_score": 8.6,
       "soar_triggered": true
